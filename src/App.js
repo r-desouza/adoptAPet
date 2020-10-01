@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { render } from "react-dom";
-import { Router } from '@reach/router';
+import { Link, Router } from '@reach/router';
 import SearchParams from "./SearchParams";
 import Details from './Details';
 
@@ -8,7 +8,12 @@ import Details from './Details';
 const App = () => {
   return (
     <div>
-      <h1 id="someting-important">Adopt me!</h1>
+      <header>
+        <Link to="/">
+          Adopt me!
+        </Link>
+      </header>
+
       <Router>
         <SearchParams path="/" />
         <Details path="/details/:id" />
